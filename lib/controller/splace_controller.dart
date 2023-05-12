@@ -1,4 +1,5 @@
 import 'package:advance_todo_app/pages/home_page.dart';
+import 'package:advance_todo_app/pages/welcome_page.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
@@ -10,10 +11,11 @@ class SplaceController extends GetxController {
   }
 
   void splaceHandel() async {
-    Future.delayed(Duration(seconds: 4), () {
-      Get.offAll(
-        HomePage(),
-      );
-    });
+    Future.delayed(
+      Duration(seconds: 4),
+      () {
+        Get.offAll(WelcomePage());
+      },
+    );
   }
 }
