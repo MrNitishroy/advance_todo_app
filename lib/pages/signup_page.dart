@@ -64,7 +64,9 @@ class SignUpPage extends StatelessWidget {
               SizedBox(height: 60),
               MyButton(
                 btnName: "Sign Up",
-                onPress: () {},
+                onPress: () {
+                  authController.signup();
+                },
               ),
               SizedBox(height: 10),
               Row(

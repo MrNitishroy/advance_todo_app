@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "905800436454",
+    "project_id": "advance-todo-app-df878",
+    "storage_bucket": "advance-todo-app-df878.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905800436454:android:9faf1cc3b793cc65cfc927",
+        "android_client_info": {
+          "package_name": "com.example.advance_todo_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905800436454-hjnpt9l9tkqhvhjt7ph6duneodni0m79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5Md83xDmpRyvEpbtSC6iKuGALz_rfBDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905800436454-hjnpt9l9tkqhvhjt7ph6duneodni0m79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

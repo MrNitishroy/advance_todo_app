@@ -57,7 +57,11 @@ class LoginPage extends StatelessWidget {
                 lable: "Password",
               ),
               SizedBox(height: 20),
-              MyButton(btnName: "Sign In", onPress: () {}),
+              MyButton(
+                  btnName: "Sign In",
+                  onPress: () {
+                    authController.login();
+                  }),
               SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
