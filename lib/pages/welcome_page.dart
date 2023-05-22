@@ -1,3 +1,5 @@
+import 'package:advance_todo_app/pages/login_page.dart';
+import 'package:advance_todo_app/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:advance_todo_app/config/my_colors.dart';
@@ -50,7 +52,9 @@ class WelcomePage extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(LoginPage());
+                  },
                   child: Container(
                     height: 60,
                     padding: EdgeInsets.all(10),
@@ -77,7 +81,9 @@ class WelcomePage extends StatelessWidget {
                       style: Theme.of(context).textTheme.labelMedium,
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(SignUpPage());
+                      },
                       child: Text(
                         " Register",
                         style: Theme.of(context)
