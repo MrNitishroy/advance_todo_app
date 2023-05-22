@@ -10,6 +10,11 @@ class AuthController extends GetxController {
   TextEditingController password = TextEditingController();
   final auth = FirebaseAuth.instance;
 
+  void userDetails() {
+    print(auth.currentUser!.email);
+    print(auth.currentUser!.uid);
+  }
+
   void login() async {
     try {
       await auth.signInWithEmailAndPassword(

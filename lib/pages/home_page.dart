@@ -26,6 +26,11 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ],
+          leading: IconButton(
+              onPressed: () {
+                authController.userDetails();
+              },
+              icon: Icon(Icons.person)),
         ),
         body: Padding(
           padding: const EdgeInsets.all(10),
@@ -40,7 +45,9 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 20),
               MyButton(
                 btnName: "Add Todo",
-                onPress: () {},
+                onPress: () {
+                  todoController.addTodo();
+                },
               ),
               SizedBox(height: 20),
               const Row(
@@ -50,36 +57,32 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Expanded(
+                  child: Obx(
+                () => SingleChildScrollView(
                   child: Column(
-                children: [
-                  ListTile(
-                    tileColor: whiteColor,
-                    onTap: () {},
-                    leading: Icon(Icons.task_alt_outlined),
-                    title: Text(
-                      "Coocking and Baking",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
-                    ),
-                    trailing: InkWell(
-                      child: Icon(Icons.delete),
-                    ),
+                    children: todoController.todoList
+                        .map((e) => Column(
+                              children: [
+                                ListTile(
+                                  tileColor: whiteColor,
+                                  onTap: () {},
+                                  leading: Icon(Icons.task_alt_outlined),
+                                  title: Text(
+                                    e.title.toString(),
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                  trailing: InkWell(
+                                    child: Icon(Icons.delete),
+                                  ),
+                                ),
+                                SizedBox(height: 10),
+                              ],
+                            ))
+                        .toList(),
                   ),
-                  SizedBox(height: 10),
-                  ListTile(
-                    tileColor: whiteColor,
-                    onTap: () {},
-                    leading: Icon(Icons.task_alt_outlined),
-                    title: Text(
-                      "Coocking and Baking",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
-                    ),
-                    trailing: InkWell(
-                      child: Icon(Icons.delete),
-                    ),
-                  ),
-                ],
+                ),
               )),
             ],
           ),
