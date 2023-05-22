@@ -8,7 +8,6 @@ class AuthController extends GetxController {
   TextEditingController name = TextEditingController();
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
-
   final auth = FirebaseAuth.instance;
 
   void login() async {
@@ -47,5 +46,10 @@ class AuthController extends GetxController {
         colorText: Colors.white,
       );
     }
+  }
+
+  void logOut() async {
+    await auth.signOut();
+    Get.offAll(LoginPage());
   }
 }
